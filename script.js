@@ -141,6 +141,20 @@ function getFiveDayForecast(city)
     });
 }
 
+function getLastSearched()
+{
+    var lastItem = localStorage.getItem("lastSearched");
+    if(lastItem == null)
+    {
+        return;
+    }
+    else
+    {
+        getCurrentWeatherData(lastItem);
+        getFiveDayForecast(lastItem);
+    }
+}
+
 var d = new Date();
 
 var month = d.getMonth()+1;
@@ -148,7 +162,12 @@ var day = d.getDate();
 
 var currentDate = (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day + '/' + d.getFullYear();
 
+window.addEventListener('storage', function(event) {
+    console.log('The value for ' + event.key + ' was changed from' + event.oldValue + ' to ' + event.newValue);
+}, false);
+
 //console.log(currentDate);
+$(window).on("load", getLastSearched());
 
 $("#cityBtn").on("click", function(){
     event.preventDefault();
@@ -158,6 +177,7 @@ $("#cityBtn").on("click", function(){
     console.log(userInput);
     getCurrentWeatherData(userInput);
     getFiveDayForecast(userInput);
+    localStorage.setItem("lastSearched", userInput);
     $('.list-group').append("<button type='button' id='historyElement' data-toggle='list' class='list-group-item list-group-item-action'>"+ userInput +" </button>");
 });
 var storeValue = [];
@@ -174,4 +194,5 @@ $("#historyBtn").on("click", function(){
     console.log(userInput);
     getCurrentWeatherData(userInput);
     getFiveDayForecast(userInput);
+    localStorage.setItem("lastSearched", userInput);
 });
