@@ -33,55 +33,63 @@
                 <button type="submit" class="btn btn-primary mb-2" id="cityBtn">Get Info</button>
               </form>
 
+              <!--
               <select class="form-control" id="cityHistory" style="margin-top: 10px;">
                 <option>Search History</option>
               </select>
+              -->
+              <div class="list-group" id="cityHistory" style="margin-top: 10px;">
+              </div>
+              <button type="submit" class="btn btn-primary mb-2" id="historyBtn" style="margin-top: 10px;">Show History Info</button>
         </div>
         <div class="col-md-8 float-left" style="border: solid black; margin-top: 20px; padding-bottom: 20px;">
             <div class="card">
                 <div class="card-body">
                   <h5 class="card-title" id="cityName">Today's weather information will appear here when you enter a city.</h5>
+                  <img id="wicon" src="">
                   <p class="card-text" id="cityInfo"></p>
+                  <div id="uvindexid">
+                  </div>
                 </div>
               </div>
         </div>
         </div>
         <div class="row">
-            <div class="col-md-8 float-right offset-md-4" style="border: solid black; margin-top: 20px; padding-bottom: 20px;">
+            <div class="col-md-9 offset-md-3" style="border: solid black; margin-top: 20px; padding-bottom: 20px;">
                 <h1 style="text-align: left;">5 Day forecast</h1>
                 <div class="card-deck">
                 <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
                     <div class="card-header" id="forecastDay1"></div>
                     <div class="card-body">
-                      <h5 class="card-title" id="clipArt1"></h5>
+                      <img id="clipArt1" src="">
                       <p class="card-text" id="forecastInfo1">5 day forecast Information will appear here when you enter a city.</p>
                     </div>
                 </div>
                 <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
                     <div class="card-header" id="forecastDay2"></div>
                     <div class="card-body">
-                      <h5 class="card-title" id="clipArt2"></h5>
+                      <img id="clipArt2" src="">
                       <p class="card-text" id="forecastInfo2">5 day forecast Information will appear here when you enter a city.</p>
                     </div>
                 </div>
                 <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
                     <div class="card-header" id="forecastDay3"></div>
                     <div class="card-body">
-                      <h5 class="card-title" id="clipArt3"></h5>
+                      <img id="clipArt3" src="">
                       <p class="card-text" id="forecastInfo3">5 day forecast Information will appear here when you enter a city.</p>
                     </div>
                 </div>
                 <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
                     <div class="card-header" id="forecastDay4"></div>
                     <div class="card-body">
-                      <h5 class="card-title" id="clipArt4"></h5>
+                      <img id="clipArt4" src="">
                       <p class="card-text" id="forecastInfo4">5 day forecast Information will appear here when you enter a city.</p>
                     </div>
                 </div>
                 <div class="card text-white bg-primary mb-3" style="max-width: 14rem;">
                     <div class="card-header" id="forecastDay5"></div>
                     <div class="card-body">
-                      <h5 class="card-title" id="clipArt5"></h5>
+                      <img id="clipArt5" src="">
                       <p class="card-text" id="forecastInfo5">5 day forecast Information will appear here when you enter a city.</p>
                     </div>
                 </div>
