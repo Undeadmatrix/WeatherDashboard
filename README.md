@@ -10,19 +10,9 @@ Table of Contents
 * [GitHub](#Github)
         
 ## Installation
-First, you would download all the files included with the project, then type in the command below in your terminal to download the necessary packages required for this program.
-
-```sh
-npm install
-```
-
- Finally, to run the program, type in the command below and you're all set!
-
- ```sh
- node server.js
- ```
+Installation for this project is very simple. Just download the project's files and run them.
  
- Or, an alternative is to view the application through the [deployed website](https://undeadmatrix.github.io/WeatherDashboard/)
+Alternatively, You can view the project at the [deployed website](https://undeadmatrix.github.io/WeatherDashboard/)
  
 ## Tech
 This project is written in Javascript and uses the OpenWeatherMap API.
